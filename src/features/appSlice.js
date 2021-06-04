@@ -7,7 +7,7 @@ export const appSlice = createSlice({
     },
     reducers:{
         incrementByAmount: (state, action) =>{
-            state.value+= action.payLoad;
+            state.value+= action.payload;
         },
     },
 
