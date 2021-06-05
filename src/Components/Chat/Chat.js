@@ -20,7 +20,7 @@ const Chat = ({id, username, profilePic, timestamp, imageUrl, read, }) => {
                 {
                     merge: true,
                 },
-                
+
                 history.push('/chats/view')
             );
 
@@ -31,7 +31,9 @@ const Chat = ({id, username, profilePic, timestamp, imageUrl, read, }) => {
             <Avatar className='chat_avatar' src={profilePic}/>
             <div className="chat_info">
                <h4>{username}</h4>
-               <p>Tap to view -<ReactTimeAgo date = {new Date(timestamp?.toDate()).toUTCString()}/></p>
+               <p>
+                   {!read && "Tap to view -"} {" "}
+                   <ReactTimeAgo date = {new Date(timestamp?.toDate()).toUTCString()}/></p>
             </div>
             {!read && <StopRoundedIcon className="chat_readIcon"/>}
             
