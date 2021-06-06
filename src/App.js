@@ -4,8 +4,7 @@ import WebcamCapture from './WebcamCapture';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Preview from './Components/Preview/Preview';
 import Chats from './Components/Chat/Chats';
@@ -30,7 +29,7 @@ function App() {
         dispatch(logout())
       }
     })
-  },[])
+  },[ ])
   return (
     <div className="App">
      <Router>
